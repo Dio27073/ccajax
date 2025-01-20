@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from 'components/ui/Button';
 import Navbar from 'components/Navbar';
 import BlurFade from "components/ui/blur-fade";
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
@@ -9,13 +11,30 @@ const Home: React.FC = () => {
       <Navbar />
 
       {/* Header Section - From Original Home Page */}
-      <header 
-        className="bg-cover bg-center py-24" 
-        style={{ backgroundImage: "url('/pictures/fly.jpeg')" }}
-      >
-        <div className="container mx-auto text-center text-white">
+      <header className="relative bg-cover bg-center py-24" style={{ backgroundImage: "url('/pictures/oran.jpeg')" }}>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/20" />
+        
+        <div className="container relative mx-auto text-center text-white px-4">
           <h1 className="text-5xl font-bold mb-4">Welcome to CCAJAX</h1>
           <p className="text-2xl mb-8">Providing compassionate Christian counseling services in Jacksonville</p>
+          
+          {/* Call-to-action buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+            <Link 
+              href="/contact"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+            >
+              Schedule Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              href="/service"
+              className="px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors"
+            >
+              Our Services
+            </Link>
+          </div>
         </div>
       </header>
 
