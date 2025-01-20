@@ -25,9 +25,9 @@ const podcasts: Podcast[] = [
   {
     id: 2,
     title: 'Season 2, Episode 1',
-    description: 'place holder',
-    audioUrl: 'https://open.spotify.com/episode/example',
-    spotifyId: 'example'
+    description: 'The Faith Approach to Counseling Children with Elizabeth Cantu',
+    audioUrl: 'https://open.spotify.com/episode/3oF2aK6d1OKLv70B3JMR4r?si=UijJ6QBOShCMkYzDGlADqQ',
+    spotifyId: '3oF2aK6d1OKLv70B3JMR4r?si=UijJ6QBOShCMkYzDGlADqQ'
   }
 ];
 
